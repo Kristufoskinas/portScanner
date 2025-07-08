@@ -30,5 +30,5 @@ if __name__ == "__main__":
             exit()        
 
     with ThreadPoolExecutor(max_workers = 200) as executor:
-        for port in range(1, 1025): # 1025 - for basic ports OR 65535 - for ALL ports
+        for port in range(1, 65535): # 1025 - for basic ports OR 65535 - for ALL ports
             executor.submit(scan_port, ip, port)
